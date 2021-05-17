@@ -50,11 +50,10 @@ public class IncomeCalculation extends Employee {
         double monSalary;
         if (salary > 0) {
             monSalary = salary / 12;
-            return monSalary;
         } else {
             monSalary = 0;
-            return monSalary;
         }
+        return monSalary;
 
 
     }
@@ -82,19 +81,18 @@ public class IncomeCalculation extends Employee {
 
     //method for calculating net Income
     public double netIncome(double salary) {
-        double monthIncome = 0;
-        double netIncome = 0;
+        double monthIncome;
+        double netIncome;
 
         if (salary > 0) {
             tax = taxCalculation(salary);
             monthIncome = incomeCalculator(salary);
-
             netIncome = monthIncome - tax;
-            return netIncome;
+
         } else {
             netIncome = 0;
-            return netIncome;
         }
+        return netIncome;
     }
 }
 
